@@ -1,0 +1,5 @@
+2/25
+1. rqt -> x,y,z축 추가하기
+- pluginmanager 부분에 rqt_Plot/Plot : [1,2,3]으로 수정
+
+- piuginmanner 안의 groups 키를 추가 (2,3)

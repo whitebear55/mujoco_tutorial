@@ -1,0 +1,8 @@
+# 사용할 로봇의 정보 정의
+robot:
+  package_name: "icir_gen3_description"
+  # Pinocchio용 경로
+  urdf_path: "/7dof/urdf"
+  urdf_name: "fr3v2.urdf"
+  # MuJoCo용 경로
+  model_xml: "fr3v2.xml"

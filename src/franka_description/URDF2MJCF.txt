@@ -1,0 +1,27 @@
+1. xacro -> URDF 변환
+rosrun xacro xacro robots/fr3/fr3.urdf.xacro > fr3.urdf
+
+2. visual은 dae, collision은 stl
+mujoco는 stl파일을 바로 읽으므로 obj파일로 변환할 필요 x
+만약에 collision이 dae면 obj변환 필요, .dae파일은 무거워서 visual은 쓰지 않는게 좋으므로
+urdf의 <mujoco>태그에 discardvisual을 true로 설정
+
+3. urdf안에 <mujoco>태그 수정 + <visual>과<collision> 태그 내부의 mesh의 filename경로 수정
+1)  
+<mujoco>
+    <compiler discardvisual="true"
+              strippath="false"
+              fusestatic="false"
+              balanceinertia="true"/>
+  </mujoco>
+ 
+2) 
+package://franka_description/meshes/robots/fr3v2/visual/link0.dae"
+meshes/robots/fr3v2/visual/link0.dae
+앞에 package: 이런경로는 인식하지 못함
+
+4. urdf를 무조코에 올리고 save.xml눌러서 MJCF파일 추출
+
+5. 해당 xml파일 바탕으로 실험환경 xml구축 -> scene.xml
+
+6. 다만, 수동으로 만들 시에 액추에이터(구동기)가 정의되지않아서 툭 떨어짐 -> <actuator>태그를 통해 PD게인 지정

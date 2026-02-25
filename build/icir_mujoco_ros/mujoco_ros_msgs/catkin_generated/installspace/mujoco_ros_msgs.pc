@@ -1,8 +1,0 @@
-prefix=/home/leehyoin/icir_tutorial/install
-
-Name: mujoco_ros_msgs
-Description: Description of mujoco_ros_msgs
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime std_msgs geometry_msgs sensor_msgs
