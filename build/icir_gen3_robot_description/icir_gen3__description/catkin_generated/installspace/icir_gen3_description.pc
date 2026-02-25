@@ -1,0 +1,8 @@
+prefix=/home/leehyoin/icir_tutorial/install
+
+Name: icir_gen3_description
+Description: Description of icir_gen3_description
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

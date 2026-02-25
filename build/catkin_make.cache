@@ -1,0 +1,2 @@
+icir_gen3_robot_description/icir_gen3__description:icir_gen3_robot_description/kortex_description:icir_gen3_robot_description/realsense2_description:icir_mujoco_ros/mujoco_ros:icir_mujoco_ros/mujoco_ros_msgs:icir_tutorial_pinocchio
+-DCATKIN_DEVEL_PREFIX=/home/leehyoin/icir_tutorial/devel -DCMAKE_INSTALL_PREFIX=/home/leehyoin/icir_tutorial/install -G Unix Makefiles
